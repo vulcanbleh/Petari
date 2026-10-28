@@ -60,7 +60,7 @@ namespace {
         return value < 0 ? 0 : value > 255 ? 255 : value;
     }
 
-#if (VERSION == RMGJ01 || VERSION == RMGE01 || VERSION == RMGP01 || VERSION == RMGP01)
+#if (VERSION == RMGJ01 || VERSION == RMGE01 || VERSION == RMGP01)
     const GXColor& getTextColor(s32 index) {
         return ::sTextColor[index];
     }
@@ -75,7 +75,7 @@ namespace {
         color.a = writer->GetTextColor().a;
         writer->SetTextColor(color);
     }
-}  // namespace
+};  // namespace
 
 CustomTagAlphaCtrl::CustomTagAlphaCtrl() : mStartDelay(), mEndDelay(), mFrame() {
     mCharInterval = 0.0f;
@@ -339,8 +339,8 @@ namespace nw4r {
 
             return textWidth;
         }
-    }  // namespace ut
-}  // namespace nw4r
+    };  // namespace ut
+};  // namespace nw4r
 
 CustomTagProcessor::CustomTagProcessor(nw4r::lyt::TextBox* textBox)
     : mAlphaCtrl(), mPlayedSounds(), mColorMappingMin(::setGXColor(textBox->GetMaterial()->GetTevColor(0))),
@@ -358,7 +358,7 @@ CustomTagProcessor::CustomTagProcessor(nw4r::lyt::TextBox* textBox)
     mIsText = false;
     mIsInfo = false;
 
-#if (VERSION == RMGJ01 || VERSION == RMGE01 || VERSION == RMGP01 || VERSION == RMGP01)
+#if (VERSION == RMGJ01 || VERSION == RMGE01 || VERSION == RMGP01)
     mNoCharSpace = true;
 #else
     mNoCharSpace = false;
@@ -560,7 +560,7 @@ CustomTagProcessor::Operation CustomTagProcessor::exePictureGroup(nw4r::ut::Rect
             }
         }
 
-#if (VERSION == RMGJ01 || VERSION == RMGE01 || VERSION == RMGP01 || VERSION == RMGP01)
+#if (VERSION == RMGJ01 || VERSION == RMGE01 || VERSION == RMGP01)
         writer.MoveCursorY(-writer.GetFontAscent());
 #else
         writer.MoveCursorY(mPictureFontOffset + -writer.GetFontAscent());
@@ -576,7 +576,7 @@ CustomTagProcessor::Operation CustomTagProcessor::exePictureGroup(nw4r::ut::Rect
 }
 
 CustomTagProcessor::Operation CustomTagProcessor::exeFontSizeGroup(nw4r::ut::Rect* rect, const MessageEditorMessageTag& tag, ContextType* context) {
-#if (VERSION == RMGJ01 || VERSION == RMGE01 || VERSION == RMGP01 || VERSION == RMGP01)
+#if (VERSION == RMGJ01 || VERSION == RMGE01 || VERSION == RMGP01)
     if (rect != nullptr) {
         return OPERATION_NO_CHAR_SPACE;
     }
