@@ -64,7 +64,7 @@ namespace {
 };  // namespace
 
 GalaxyMapDomeIcon::GalaxyMapDomeIcon(int param1, LayoutActor* pHost, const char* pPaneName, const char* pParam4)
-    : LayoutActor(pPaneName, true), _20(param1), mHost(pHost), mPaneName(pPaneName), _2C(pParam4), mNamePlate(), mMode() {
+    : LayoutActor(pPaneName), _20(param1), mHost(pHost), mPaneName(pPaneName), _2C(pParam4), mNamePlate(), mMode() {
 }
 
 void GalaxyMapDomeIcon::appear() {
@@ -127,7 +127,7 @@ s32 GalaxyMapDomeIcon::calcDomeStatus() const {
 bool GalaxyMapDomeIcon::isComplete() const {
     JMapInfo mapInfo = JMapInfo();
 
-    mapInfo.attach(&cGalaxyInfoTable);
+    mapInfo.attach(&GalaxyInfoTable_bcsv_start);
 
     CheckerIsComplete checker = CheckerIsComplete(_20);
 
@@ -187,7 +187,7 @@ void GalaxyMapDomeIcon::syncStatus() {
 bool GalaxyMapDomeIcon::hasNewGalaxy() const {
     JMapInfo mapInfo = JMapInfo();
 
-    mapInfo.attach(&cGalaxyInfoTable);
+    mapInfo.attach(&GalaxyInfoTable_bcsv_start);
 
     CheckerIsExistNewGalaxy checker = CheckerIsExistNewGalaxy(_20);
 

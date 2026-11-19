@@ -36,7 +36,6 @@
 #include "Game/Util/SoundUtil.hpp"
 #include "Game/Util/StarPointerUtil.hpp"
 #include "Game/Util/TalkUtil.hpp"
-#include "revolution/os.h"
 #include <cstdio>
 
 namespace NrvTicoFat {
@@ -248,7 +247,7 @@ void TicoFat::init(const JMapInfoIter& rIter) {
     setScale(calcScale());
     MR::joinToGroupArray(this, rIter, "惑星出現", 32);
     AstroDemoFunction::tryRegisterSimpleCastIfAstroGalaxy(this);
-    setDefaults();
+    mReactionParam.setDefaultAction();
     _12C = 1000.0f;
     const char* waitActionName = getActionName("Wait");
     mParam._14 = waitActionName;

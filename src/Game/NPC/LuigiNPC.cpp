@@ -19,7 +19,6 @@
 #include "Game/Util/SoundUtil.hpp"
 #include "Game/Util/StringUtil.hpp"
 #include "Game/Util/TalkUtil.hpp"
-#include "revolution/types.h"
 
 namespace {
     static const s32 sLiftUpSeTiming = 87;
@@ -225,7 +224,7 @@ void LuigiNPC::setWaitAction() {
     mParam._18 = turn;
     mParam._1C = "Talk";
     mParam._20 = turn;
-    setDefaults();
+    mReactionParam.setDefaultAction();
     _12C = 1500.0f;
     _128 = true;
 }

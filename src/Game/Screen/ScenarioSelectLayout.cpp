@@ -72,7 +72,7 @@ namespace NrvScenarioSelectLayout {
 };  // namespace NrvScenarioSelectLayout
 
 ScenarioSelectLayout::ScenarioSelectLayout(EffectSystem* pEffectSystem, const CameraContext* pCameraContext)
-    : LayoutActor("シナリオ選択レイアウト", true), mSelectedScenarioNo(-1), _24(), _28(), mStar(), mScenarioSky(), mEffectSystem(pEffectSystem),
+    : LayoutActor("シナリオ選択レイアウト"), mSelectedScenarioNo(-1), _24(), _28(), mStar(), mScenarioSky(), mEffectSystem(pEffectSystem),
       mCameraContext(pCameraContext), mNewTextFollowPos(0.0f, 0.0f), mNewGreenTextFollowPos(0.0f, 0.0f), mStarTopFollowPos(0.0f, 0.0f), mBackButton(),
       mMarioPaneFollowPos(0.0f, 0.0f), mMarioPaneName(), _A4(), _A8(-1) {
     mEffectHostMtx.identity();
@@ -211,7 +211,7 @@ void ScenarioSelectLayout::appear() {
     mScenarioSky->appear();
     MultiScene::startBtk(mScenarioSky, "ScenarioSelectSky");
 
-#if (VERSION == RMGP01 || VERSION == RMGK01)
+#if (VERSION == RMGP01 || VERSION == RMGK01 || VERSION == SHIELD)
     MR::hidePaneRecursive(this, "CometAppear");
 #endif
 
