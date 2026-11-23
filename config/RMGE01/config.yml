@@ -8,6 +8,9 @@ splits: config/RMGE01/splits.txt
 # See config.example.yml for a list.
 mw_comment_version: 14
 
+selfile: files/ModuleData/product.sel
+selfile_hash: 927b322904e39905ef1533a2f29a84c168dc52d1
+
 extract:
 - symbol: StoryProgressTable_bcsv_start
   binary: assets/StoryProgressTable.bcsv
@@ -23,3 +26,9 @@ block_relocations:
 - source: .data:0x805668DC
 - source: .rodata:0x80547AB8
 - source: .text:0x804A16D0
+
+modules:
+- object: files/ModuleData/HomeButtonMenuWrapperRSO.rso
+  hash: 20cdb6b3fcbba6ab486780be2e12675f93644598
+  symbols: config/RMGE01/modules/HomeButtonMenuWrapperRSO/symbols.txt
+  splits: config/RMGE01/modules/HomeButtonMenuWrapperRSO/splits.txt

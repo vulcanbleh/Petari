@@ -1,0 +1,175 @@
+Sections:
+	.text       type:code align:4
+	.ctors      type:rodata align:4
+	.dtors      type:rodata align:4
+	.rodata     type:rodata align:8
+	.data       type:data align:8
+	.bss        type:bss align:8
+
+Runtime/executor.c:
+	.text       start:0x00000000 end:0x000000C8
+	.data       start:0x00000000 end:0x00000020
+
+Runtime/global_destructor_chain.c:
+	.text       start:0x000000C8 end:0x00000138
+	.dtors      start:0x00000000 end:0x00000004
+	.bss        start:0x00000000 end:0x00000008
+
+homebuttonLib/HBMFrameController.cpp:
+	.text       start:0x00000138 end:0x000002E0
+	.rodata     start:0x00000000 end:0x00000008
+	.data       start:0x00000020 end:0x00000048
+
+homebuttonLib/HBMAnmController.cpp:
+	.text       start:0x000002E0 end:0x000003EC
+	.data       start:0x00000048 end:0x00000090
+
+homebuttonLib/HBMGUIManager.cpp:
+	.text       start:0x000003EC end:0x00001894
+	.rodata     start:0x00000008 end:0x00000018
+	.data       start:0x00000090 end:0x000002F0
+	.bss        start:0x00000008 end:0x00000010
+
+homebuttonLib/HBMController.cpp:
+	.text       start:0x00001894 end:0x00002130
+	.rodata     start:0x00000018 end:0x00000028
+	.bss        start:0x00000010 end:0x000001A8
+
+homebuttonLib/HBMRemoteSpk.cpp:
+	.text       start:0x00002130 end:0x00002930
+	.data       start:0x000002F0 end:0x00000320
+	.bss        start:0x000001A8 end:0x000001B0
+
+homebuttonLib/HBMAxSound.cpp:
+	.text       start:0x00002930 end:0x00002F24
+	.rodata     start:0x00000028 end:0x00000038
+	.data       start:0x00000320 end:0x00000670
+	.bss        start:0x000001B0 end:0x000001B8
+
+homebuttonLib/HBMCommon.cpp:
+	.text       start:0x00002F24 end:0x000032B4
+	.data       start:0x00000670 end:0x000006C0
+	.bss        start:0x000001B8 end:0x000001C8
+
+homebuttonLib/HBMBase.cpp:
+	.text       start:0x000032B4 end:0x0000AF6C
+	.rodata     start:0x00000038 end:0x00000398
+	.data       start:0x000006C0 end:0x000013A0
+	.bss        start:0x000001C8 end:0x000001E8
+
+homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:
+	.text       start:0x0000AF6C end:0x0000BB08
+	.rodata     start:0x00000398 end:0x000003B8
+	.data       start:0x000013A0 end:0x00001420
+
+homebuttonLib/nw4hbm/lyt/lyt_arcResourceAccessor.cpp:
+	.text       start:0x0000BB08 end:0x0000BE94
+	.data       start:0x00001420 end:0x000014A0
+
+homebuttonLib/nw4hbm/lyt/lyt_bounding.cpp:
+	.text       start:0x0000BE94 end:0x0000BFF8
+	.ctors      start:0x00000000 end:0x00000004
+	.data       start:0x000014A0 end:0x00001588
+	.bss        start:0x000001E8 end:0x000001F0
+
+homebuttonLib/nw4hbm/lyt/lyt_common.cpp:
+	.text       start:0x0000BFF8 end:0x0000CE0C
+	.rodata     start:0x000003B8 end:0x000003C8
+	.bss        start:0x000001F0 end:0x00000218
+
+homebuttonLib/nw4hbm/lyt/lyt_drawInfo.cpp:
+	.text       start:0x0000CE0C end:0x0000CEC8
+	.rodata     start:0x000003C8 end:0x000003D0
+	.data       start:0x00001588 end:0x000015B8
+
+homebuttonLib/nw4hbm/lyt/lyt_group.cpp:
+	.text       start:0x0000CEC8 end:0x0000D1F4
+	.data       start:0x000015B8 end:0x000015E0
+
+homebuttonLib/nw4hbm/lyt/lyt_layout.cpp:
+	.text       start:0x0000D1F4 end:0x0000DEA0
+	.rodata     start:0x000003D0 end:0x000003D8
+	.data       start:0x000015E0 end:0x00001630
+	.bss        start:0x00000218 end:0x00000220
+
+homebuttonLib/nw4hbm/lyt/lyt_material.cpp:
+	.text       start:0x0000DEA0 end:0x000112D4
+	.rodata     start:0x000003D8 end:0x000003EC
+	.data       start:0x00001630 end:0x000016B8
+
+homebuttonLib/nw4hbm/lyt/lyt_pane.cpp:
+	.text       start:0x000112D4 end:0x00012248
+	.ctors      start:0x00000004 end:0x00000008
+	.rodata     start:0x000003EC end:0x00000438
+	.data       start:0x000016B8 end:0x00001720
+	.bss        start:0x00000220 end:0x00000228
+
+homebuttonLib/nw4hbm/lyt/lyt_picture.cpp:
+	.text       start:0x00012248 end:0x00012780
+	.ctors      start:0x00000008 end:0x0000000C
+	.rodata     start:0x00000438 end:0x00000448
+	.data       start:0x00001720 end:0x000017C0
+	.bss        start:0x00000228 end:0x00000230
+
+homebuttonLib/nw4hbm/lyt/lyt_resourceAccessor.cpp:
+	.text       start:0x00012780 end:0x000127D8
+	.data       start:0x000017C0 end:0x000017D8
+
+homebuttonLib/nw4hbm/lyt/lyt_textBox.cpp:
+	.text       start:0x000127D8 end:0x00013E6C
+	.ctors      start:0x0000000C end:0x00000010
+	.rodata     start:0x00000448 end:0x00000450
+	.data       start:0x000017D8 end:0x00001888
+	.bss        start:0x00000230 end:0x00000238
+
+homebuttonLib/nw4hbm/lyt/lyt_window.cpp:
+	.text       start:0x00013E6C end:0x0001631C
+	.ctors      start:0x00000010 end:0x00000014
+	.rodata     start:0x00000450 end:0x00000464
+	.data       start:0x00001888 end:0x00001970
+	.bss        start:0x00000238 end:0x00000240
+
+homebuttonLib/nw4hbm/math/math_triangular.cpp:
+	.text       start:0x0001631C end:0x000165A0
+	.rodata     start:0x00000464 end:0x00000488
+	.data       start:0x00001970 end:0x00002A88
+
+homebuttonLib/nw4hbm/ut/ut_binaryFileFormat.cpp:
+	.text       start:0x000165A0 end:0x00016614
+
+homebuttonLib/nw4hbm/ut/ut_CharStrmReader.cpp:
+	.text       start:0x00016614 end:0x00016724
+
+homebuttonLib/nw4hbm/ut/ut_CharWriter.cpp:
+	.text       start:0x00016724 end:0x00018214
+	.rodata     start:0x00000488 end:0x000004A0
+	.bss        start:0x00000240 end:0x00000268
+
+homebuttonLib/nw4hbm/ut/ut_Font.cpp:
+	.text       start:0x00018214 end:0x000182BC
+	.data       start:0x00002A88 end:0x00002AB8
+
+homebuttonLib/nw4hbm/ut/ut_LinkList.cpp:
+	.text       start:0x000182BC end:0x000183B4
+
+homebuttonLib/nw4hbm/ut/ut_list.cpp:
+	.text       start:0x000183B4 end:0x00018514
+
+homebuttonLib/nw4hbm/ut/ut_ResFont.cpp:
+	.text       start:0x00018514 end:0x00018818
+	.data       start:0x00002AB8 end:0x00002B98
+
+homebuttonLib/nw4hbm/ut/ut_ResFontBase.cpp:
+	.text       start:0x00018818 end:0x00018DE8
+	.data       start:0x00002B98 end:0x00002C58
+
+homebuttonLib/nw4hbm/ut/ut_TagProcessorBase.cpp:
+	.text       start:0x00018DE8 end:0x000195B8
+	.rodata     start:0x000004A0 end:0x000004A8
+	.data       start:0x00002C58 end:0x00002CE0
+
+homebuttonLib/nw4hbm/ut/ut_TextWriterBase.cpp:
+	.text       start:0x000195B8 end:0x0001B048
+	.ctors      start:0x00000014 end:0x00000018
+	.rodata     start:0x000004A8 end:0x000004C0
+	.bss        start:0x00000268 end:0x0000028C
